@@ -1,0 +1,22 @@
+{
+  "name": "javascript-exercises",
+  "version": "1.0.0",
+  "description": "Javascript exercises - Viseven use only",
+  "main": "exercises.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "grade": "jest --useStderr --json --outputFile=./tests/result.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.qapint.com:a.gallego/javascript-exercises.git"
+  },
+  "author": "Agustin Gallego",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.0"
+  }
+}
