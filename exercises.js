@@ -31,26 +31,6 @@ function sayHello(name, age) {
 
 }
 
-function isEven(number) {
-    // Write a function that receives a number as an argument (number)
-    // returns true if the number is even, return false if not
-    // ex:
-    // isEven(20) => true
-    // isEven(21) => false
-    // Code:
-
-}
-  
-function isOdd(number) {
-    // Write a function that receives a number as an argument (number)
-    // returns true if the number is odd, return false if not
-    // ex:
-    // isOdd(20) => false
-    // isOdd(21) => true
-    // Code:
-
-}
-
 function arraySum(array) {
     // Write a function that receives an array of integers as an argument (array)
     // and return the sum of all the elements
@@ -78,30 +58,6 @@ function average(array) {
     // ex:
     // average([1,2,3]) => 2
     // average([10, 20, 3]) => 11
-    // Code:
-
-}
-
-function anualSalary(employees, name) {
-    // Write a function that receives an array with object, each one with information about the employees
-    // the funciton also receives a string (name) with the name of an employee
-    // return the salary of that employee
-    // ex:
-    // var employees = [{
-    //    name: 'Simon',
-    //    salary: 1000,.
-    //  },
-    //  {
-    //    name: 'Camila',
-    //    salary: 4000,
-    //  },
-    //  {
-    //    name: 'Sole',
-    //    salary: 500,
-    //  }
-    // ];
-    // anualSalary(employees, 'Simon'); => 12000
-    // anualSalary(employees, 'Sole;); => 6000
     // Code:
 
 }
@@ -229,13 +185,10 @@ module.exports = {
     minutesSeconds,
     sameLength,
     sayHello,
-    isEven,
-    isOdd,
     arraySum,
     findInArray,
     average,
     findTheWord,
-    anualSalary,
     randomNumbers,
     triangleArea,
     isVowel,

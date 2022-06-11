@@ -2,12 +2,9 @@ const {
     minutesSeconds,
     sameLength,
     sayHello,
-    isEven,
-    isOdd,
     arraySum,
     findInArray,
     average,
-    anualSalary,
     randomNumbers,
     triangleArea,
     isVowel,
@@ -46,24 +43,6 @@ const {
       });
     });
 
-    describe('isEven', function() {
-      it('should return true for number = 100', function() {
-          expect(isEven(100)).toStrictEqual(true);
-      });
-      it('should return false for number = 12345', function() {
-        expect(isEven(12345)).toStrictEqual(false);
-      });
-    });
-
-    describe('isOdd', function() {
-      it('should return true for number = 25', function() {
-          expect(isOdd(25)).toStrictEqual(true);
-      });
-      it('should return false for number = 30', function() {
-        expect(isOdd(30)).toStrictEqual(false);
-      });
-    });
-
     describe('arraySum', function() {
       it('should return 10 for [2, 3, 5]', function() {
           expect(arraySum([2, 3, 5])).toStrictEqual(10);
@@ -91,31 +70,6 @@ const {
       })
       it('should return 1 for [1, 1, 1, 1]', function() {
         expect(average([1, 1, 1, 1])).toBe(1)
-      })
-    })
-  
-    describe('anualSalary',function(){
-      var employees = [{
-         nombre: 'name1',
-         salario: 1000,
-       },
-       {
-         nombre: 'name2',
-         salario: 4000,
-       },
-       {
-         nombre: 'name3',
-         salario: 500,
-       }
-      ];
-      it('should return 12000', function(){
-        expect(anualSalary(employees, 'name1')).toBe(12000);
-      })
-      it('should return 48000', function() {
-        expect(anualSalary(employees, 'name2')).toBe(48000);
-      })
-      it('should return 6000', function() {
-        expect(anualSalary(employees, 'name3')).toBe(6000);
       })
     })
 
