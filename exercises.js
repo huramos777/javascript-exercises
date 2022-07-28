@@ -7,6 +7,7 @@ function minutesSeconds(minutes) {
     // minutesSeconds(5) => 300
     // minutesSeconds(3) => 180
     // Code:
+    return minutes * 60;
     
 }
 
@@ -17,6 +18,7 @@ function sameLength(string1, string2) {
     // sameLength('Cintia', 'Rafael') => true
     // sameLength('Vanesa', 'Chayanne') => false
     // Code:
+    return string1.length === string2.length;
 
 }
 
@@ -28,7 +30,7 @@ function sayHello(name, age) {
     // sayHello('Ramiro', 28) => 'Hi, my name is Ramiro. I am 28 years old.'
     // INTENTEN HACERLO CON BACKTICKS
     // Code:
-
+    return `Hi, my name is ${name}. I am ${age} years old.`
 }
 
 function arraySum(array) {
@@ -39,6 +41,11 @@ function arraySum(array) {
     // arraySum([3, 4, 1]) => 8
     // Code:
     // NO HAGAN TRAMPA, NO VALE USAR REDUCE
+    let suma = 0
+    for(let i = 0; i < array.length; i++){
+      suma = suma + array[i];
+    }
+	return suma;
 
 }
 
@@ -49,7 +56,12 @@ function findInArray(array, number) {
     // findInArray([5, 2, 4, 5], 2) => true
     // findInArray([3, 4, 1], 2) => false
     // Code:
-
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === number){
+          return true
+        }      
+      }
+    return false
 }
 
 function average(array) {
@@ -59,7 +71,11 @@ function average(array) {
     // average([1,2,3]) => 2
     // average([10, 20, 3]) => 11
     // Code:
-
+    let suma = 0
+    for (let i = 0; i < array.length; i++) {
+        suma = suma + array[i]        
+    }
+    return suma / array.length;
 }
 
 function randomNumbers(number) {
@@ -69,7 +85,12 @@ function randomNumbers(number) {
     // randomNumbers(5); => [23, 11, 4, 76, 30]
     // randomNumbers(3); => [3, 54, 18]
     // Code:
-
+    let array = [];
+  	
+  for(let i = 0; i < number; i++){
+    array.push(Math.floor(Math.random()*99))
+  }
+  return array
 }
 
 function triangleArea(base, height) {
@@ -78,7 +99,7 @@ function triangleArea(base, height) {
     // ex:
     // triangleArea(5, 10); => 25
     // triangleArea(3, 20); => 30
-
+    return (base * height) / 2;
 }
 
 function isVowel(letter) {
@@ -89,7 +110,13 @@ function isVowel(letter) {
     // ex:
     // isVowel('a') => 'Is vowel';
     // isVowel(6) => 'Is not vowel';
-
+    if(typeof letter !== 'string' || letter.length > 1){
+        return "Incorrect data"
+      }
+        if(letter === "a" || letter === "e" || letter === "i" || letter === "o" ||letter === "u"){
+            return "Is vowel"
+        }
+        return "Is not vowel"
 }
 
 function findTheWord(string) {
@@ -99,7 +126,8 @@ function findTheWord(string) {
     // findTheWord('welcome to viseven') => true;
     // findTheWord('hi, my name is Agustin') => false;
     // Code:
-
+    let arrStr = string.split(' ');
+    return arrStr.includes("viseven")
 }
 
 function createObject(name, surname, age, city) {
@@ -113,7 +141,13 @@ function createObject(name, surname, age, city) {
     //     city: 'Cordoba'
     // }
     // Code:
-
+    let objeto = {
+        name: name,
+         surname: surname,
+         age: age,
+         city: city
+    }
+    return objeto
 }
 
 function highestRating(arr) {
@@ -129,7 +163,11 @@ function highestRating(arr) {
     //
     // highestRating(players) => 'The best player is Soledad, with 9999 points.'
     // Code:
-
+    for(let i = arr.length - 1; i > 0; i--){
+        if(arr[i].rating > arr[i-1].rating){
+          return `The best player is ${arr[i].name}, with ${arr[i].rating} points.`
+        }
+      }
 }
 
 function objectKeys(obj) {
@@ -145,7 +183,7 @@ function objectKeys(obj) {
     //
     // objectKeys(employee) => ['name', 'age', 'city', 'company']
     // Code:
-
+    return Object.keys(obj);
 }
 
 function showRespectToRiquelme(arr) {
@@ -175,7 +213,13 @@ function showRespectToRiquelme(arr) {
     //   { name: 'Simon'},
     // ]
     // Code:
-    
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i].name === 'Riquelme' ){
+            arr[i].respect = 'You are the best';
+        }
+        
+    }
+    return arr;
 }
 
 // ---------------------------------------------------------------------------------------------------------------
